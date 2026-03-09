@@ -4,6 +4,19 @@ module.exports = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          "var(--font-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        inter: ["Inter", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -38,15 +51,16 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Text colors
+        "text-primary": "hsl(var(--text-primary))",
+        // Border colors
+        "border-primary": "hsl(var(--border-primary))",
       },
       borderColor: {
         divider: "#ffffff26",
       },
       borderRadius: {
         lg: "var(--radius)",
-      },
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
       },
       maxWidth: {
         "8xl": "90rem",
@@ -58,6 +72,23 @@ module.exports = {
           },
           "100%": {
             backgroundPosition: "100% 50%",
+          },
+        },
+        levitate: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "30%": {
+            transform: "translateY(-10px)",
+          },
+          "50%": {
+            transform: "translateY(4px)",
+          },
+          "70%": {
+            transform: "translateY(-15px)",
+          },
+          "100%": {
+            transform: "translateY(0)",
           },
         },
       },
