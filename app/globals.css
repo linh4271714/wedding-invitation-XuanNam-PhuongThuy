@@ -140,25 +140,55 @@ body {
   animation-delay: 2s;
 }
 
+/* Swap color between primary and secondary (for initials like X, P) */
+@keyframes initial-color-swap {
+  0%,
+  100% {
+    color: hsl(var(--secondary));
+  }
+  50% {
+    color: hsl(var(--primary));
+  }
+}
+
+.initial-color-swap {
+  animation: initial-color-swap 1s ease-in-out infinite;
+}
+
 /* Infinite sparkling / shimmering effect for special text */
 @keyframes sparkle-glow {
   0%,
   100% {
-    text-shadow: none;
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
   }
   40% {
-    text-shadow:
-      0 0 6px rgba(255, 255, 255, 1),
-      0 0 14px rgba(255, 230, 230, 1),
-      0 0 26px rgba(255, 210, 210, 1);
+    filter:
+      drop-shadow(0 0 4px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 12px rgba(255, 230, 230, 1))
+      drop-shadow(0 0 22px rgba(255, 210, 210, 1));
   }
   60% {
-    text-shadow:
-      0 0 4px rgba(255, 255, 255, 0.9),
-      0 0 10px rgba(255, 220, 220, 0.9);
+    filter:
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.9))
+      drop-shadow(0 0 9px rgba(255, 220, 220, 0.9));
   }
 }
 
 .sparkle-text {
   animation: sparkle-glow 1.2s ease-in-out infinite;
+  will-change: filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .initial-color-swap {
+    animation: none;
+    color: hsl(var(--secondary));
+  }
+
+  .sparkle-text {
+    animation: none;
+    filter:
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.6))
+      drop-shadow(0 0 10px rgba(255, 220, 220, 0.5));
+  }
 }

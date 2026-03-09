@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Great_Vibes, Montserrat, Lora } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import BackgroundAudio from "@/components/atoms/BackgroundAudio";
 
 
 const greatVibes = Great_Vibes({
@@ -35,7 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${greatVibes.className} ${montserrat.className} ${lora.className}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <BackgroundAudio />
+        </Providers>
       </body>
     </html>
   );

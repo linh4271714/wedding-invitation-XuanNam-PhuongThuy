@@ -1,9 +1,9 @@
 import Image from "next/image";
-import prewed1 from "../../assets/images/prewed1.jpg";
+import prewed1 from "../../assets/images/prewed.jpeg";
 
 const TopSection = () => {
     return <>
-        <div className="flex flex-col w-full gap-0 text-4xl font-bold px-10 py-6 sparkle-text" style={{ fontFamily: "var(--font-great-vibes)" }}>
+        <div className="flex flex-col w-full gap-0 text-4xl 2xl:text-5xl font-bold px-20 lg:px-10 2xl:px-20 py-6" style={{ fontFamily: "var(--font-great-vibes)" }}>
             <span className="text-primary self-start">
                 <span className="text-secondary">X</span>uân Nam
             </span>
@@ -12,7 +12,7 @@ const TopSection = () => {
                 <span className="text-secondary">P</span>hương Thuỳ
             </span>
         </div>
-        <div className="p-3">
+        <div className="px-3">
             <Image
             src={prewed1}
             alt=""
@@ -21,7 +21,7 @@ const TopSection = () => {
             className="object-fit"
             />
         </div>
-        <p className="text-primary text-center text-lg px-10 ">
+        <p className="text-primary text-center text-lg 2xl:text-2xl px-10 mt-2">
             <span
                 className="text-reading-left-to-right"
                 style={{ fontFamily: "var(--font-lora)" }}
