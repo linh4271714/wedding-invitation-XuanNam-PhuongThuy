@@ -1,18 +1,20 @@
 import FadingAnimation from "../atoms/FadingAnimation"
+import QRchure from "../../assets/images/QRchure.png";
+import GuiMungCuoiButton from "../atoms/GuiMungCuoiButton";
 
 const ThanhHonSchedule =()=>{
     return <>
     <div className="w-1/2 m-auto mt-10 flex flex-col items-center">
         <FadingAnimation>
-            <p className="text-secondary text-2xl 2xl:text-4xl text-center"  style={{ fontFamily: "var(--font-great-vibes)" }}>Lễ Thành Hôn</p>
+            <p className="text-secondary text-3xl 2xl:text-5xl text-center"  style={{ fontFamily: "var(--font-great-vibes)" }}>Lễ Thành Hôn</p>
             <p className="text-primary w-full text-end text-sm 2xl:text-md">sẽ diễn ra vào</p>
         </FadingAnimation>
         <FadingAnimation>
-            <div className="text-secondary font-bold text-2xl flex flex-row gap-8 mt-4 justify-center"><span>05 - 04</span><span>7 : 00</span></div>
-            <div className="text-primary font-bold text-sm 2xl:text-md flex flex-row gap-16 justify-center -mt-1"><span>ngày</span><span>giờ</span></div>
+            <div className="text-secondary font-bold text-2xl flex flex-row gap-8 mt-4 justify-center"><span>7 : 00</span><span>18 - 02</span></div>
+            <div className="text-primary font-bold text-sm 2xl:text-md flex flex-row gap-16 justify-center -mt-1"><span>giờ</span><span>ngày</span></div>
         </FadingAnimation>
         <FadingAnimation>
-            <p className="text-secondary italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Chủ nhật, ngày 18 tháng 2 năm Bính Ngọ</p>
+            <p className="text-secondary italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Chủ nhật, ngày 05 tháng 04 năm 2026</p>
         </FadingAnimation>
     </div>
     <FadingAnimation>
@@ -24,6 +26,7 @@ const ThanhHonSchedule =()=>{
         <p className="text-primary text-xl font-bold"><span style={{ fontFamily: "var(--font-great-vibes)", marginRight: '4px' }}>Bà</span>Trần Thị Thanh</p>
         <p className="text-primary text-lg mt-3 text-center">Thôn Thọ Lộc, xã Tống Sơn,<br /> tỉnh Thanh Hoá</p>
     </FadingAnimation>
+    <GuiMungCuoiButton QR={QRchure} />
     </>
 }
 

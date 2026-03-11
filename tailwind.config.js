@@ -99,11 +99,26 @@ module.exports = {
           "0%": { opacity: 1 },
           "100%": { opacity: 0 },
         },
+        "float-in-left": {
+          "0%": { marginLeft: '50%' },
+          "100%": { marginLeft: 0 },
+        },
+        "float-in-right": {
+          "0%": { marginRight: '50%' },
+          "100%": { marginRight: 0 },
+        },
+        "float-in-top": {
+          "0%": { marginTop: '50%' },
+          "100%": { marginTop: 0 },
+        }
       },
       animation: {
         "text-gradient": "text-gradient 4s linear infinite forwards",
         "fade-in": "fade-in 2s ease-out forwards",
         "fade-out": "fade-out 1s ease-out forwards",
+        "float-in-left": "float-in-left 2s ease-out forwards",
+        "float-in-right": "float-in-right 2s ease-out forwards",
+        "float-in-top": "float-in-top 2s ease-out forwards",
       },
     },
   },

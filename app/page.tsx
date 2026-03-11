@@ -10,6 +10,9 @@ import prewed4 from "../assets/images/prewed22.jpg";
 import AnHoiSchedule from "@/components/sections/AnHoiSchedule";
 import FadingAnimation from "@/components/atoms/FadingAnimation";
 import ThanhHonSchedule from "@/components/sections/ThanhHonSchedule";
+import Album from "@/components/sections/Album";
+import FloatToLeft from "@/components/atoms/FloatToLeft";
+import FloatToRight from "@/components/atoms/FloatToRight";
 
 
 export default function Home() {
@@ -28,27 +31,30 @@ export default function Home() {
       </div>
 
         <div className="min-h-screen w-screen flex flex-col lg:flex-row justify-center items-center lg:items-start gap-0 lg:gap-[100px] overflow-auto">
-          <div className="w-screen max-w-[550px] bg-background min-h-screen lg:mt-[100px]">
+          <div className="w-screen max-w-[550px] bg-background min-h-screen mt-6 lg:mt-10">
             <TopSection />
 
             <FadingAnimation className="m-auto mt-10">
-              <p className="text-secondary text-3xl 2xl:text-4xl text-center"  style={{ fontFamily: "var(--font-great-vibes)" }}>Vào tháng 4/2026 này</p>
+              <p className="text-secondary text-3xl 2xl:text-4xl text-center"  style={{ fontFamily: "var(--font-great-vibes)" }}>Vào tháng 2 Âm lịch này</p>
             </FadingAnimation>
             <FadingAnimation>
               <p className="px-5 italic text-md 2xl:text-lg mt-2 mb-5 text-center">Hai bên gia đình xin kính mời người thân họ hàng, bạn bè, đồng nghiệp, hàng xóm láng giềng đến cùng dùng bữa cơm thân mật, chung vui cùng gia đình chúng tôi.</p>
             </FadingAnimation>
 
-            <FadingAnimation className="flex gap-0 relative z-5 px-3 mb-10">
-              <Image src={prewed4} alt='' className="w-1/2 h-auto" />
-              <Image src={prewed3} alt='' className="w-1/2 h-auto" />
-            </FadingAnimation>
+            <div className="flex gap-0 px-3 mb-10">
+              <FloatToRight className="w-1/2"><Image src={prewed4} alt='' className="w-full h-auto" /></FloatToRight>
+              <FloatToLeft className="w-1/2"><Image src={prewed3} alt='' className="w-full h-auto" /></FloatToLeft>
+            </div>
 
             <AnHoiSchedule />
-            <FadingAnimation className="px-3">
+
+            <FloatToLeft className="px-3">
               <Image src={prewed2} alt='' className="w-full h-auto" />
-            </FadingAnimation>
+            </FloatToLeft>
 
             <ThanhHonSchedule />
+
+            <Album />
             
             <Footer />
           </div>
