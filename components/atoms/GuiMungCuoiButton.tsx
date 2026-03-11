@@ -11,7 +11,7 @@ const GuiMungCuoiButton = ({QR}: {QR: StaticImageData}) => {
             <button onClick={() => setShowQR(true)} className="px-4 py-2 bg-secondary text-background text-md rounded-lg">Gửi mừng cưới</button>
         </FadingAnimation>
         {isShowQR && 
-            <div className="fixed z-50 h-[50vh] top-[25vh] w-[50vw] left-[25vw] p-5 bg-background border-[2px solid] border-secondary">
+            <div className="fixed z-50 h-fix top-[25vh] w-[70vw] lg:w-[50vw] left-[15vw] lg:left-[25vw] p-5 pt-10 bg-background border-[1px] border-solid border-primary rounded-lg flex items-center justify-center">
                 <button
                     onClick={() => setShowQR(false)}
                     className="absolute top-2 right-2 p-2 rounded-full hover:bg-gray-200 focus:outline-none"
@@ -22,7 +22,7 @@ const GuiMungCuoiButton = ({QR}: {QR: StaticImageData}) => {
                         <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                     </svg>
                 </button>
-                <Image src={QR} alt='' className="max-h-full max-w-full object-contain" />
+                <Image src={QR} alt='' className="h-auto max-h-[40vh] w-auto object-contain" />
             </div>
         }
     </>
