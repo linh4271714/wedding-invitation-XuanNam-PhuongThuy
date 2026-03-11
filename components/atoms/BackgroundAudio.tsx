@@ -79,7 +79,7 @@ export default function BackgroundAudio({
   }, []);
 
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const audioSrc = `${basePath}/audio/Perfect.mp3`;
+  const audioSrc = `${basePath}/audio/MaiMaiBenNhau.mp3`;
 
   return (
     <div className={className}>

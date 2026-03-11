@@ -6,8 +6,8 @@
 
 /* 🌈 Biến CSS dùng cho shadcn/ui */
 :root {
-  /* Background color: #E8DCCB */
-  --background: 35 39% 85%;
+  /* Background color: #fff8ef */
+  --background: 34 100% 97%;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
@@ -128,16 +128,21 @@ body {
 }
 
 .text-reading-left-to-right,
-.text-reading-left-to-right-delay-2s {
+.text-reading-left-to-right-delay-2s,
+.text-reading-left-to-right-delay-4s {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
   opacity: 0; /* hidden until animation runs */
   animation: text-reveal-left-to-right 2s ease-out forwards;
 }
 
 .text-reading-left-to-right-delay-2s {
   animation-delay: 2s;
+}
+
+.text-reading-left-to-right-delay-4s {
+  animation-delay: 4s;
 }
 
 /* Swap color between primary and secondary (for initials like X, P) */

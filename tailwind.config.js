@@ -91,9 +91,19 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        "fade-in": {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        "fade-out": {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
       },
       animation: {
         "text-gradient": "text-gradient 4s linear infinite forwards",
+        "fade-in": "fade-in 2s ease-out forwards",
+        "fade-out": "fade-out 1s ease-out forwards",
       },
     },
   },
