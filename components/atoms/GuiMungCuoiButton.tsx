@@ -8,7 +8,7 @@ const GuiMungCuoiButton = ({QR}: {QR: StaticImageData}) => {
 
     return <>
         <FadingAnimation className="m-auto my-4">
-            <button onClick={() => setShowQR(true)} className="px-4 py-2 bg-secondary text-background text-md rounded-lg">Gửi mừng cưới</button>
+            <button onClick={() => setShowQR(true)} className="px-4 py-2 bg-secondary text-background text-md rounded-lg">Gửi quà mừng</button>
         </FadingAnimation>
         {isShowQR && 
             <div className="fixed z-50 h-fix top-[25vh] w-[70vw] lg:w-[50vw] left-[15vw] lg:left-[25vw] p-5 pt-10 bg-background border-[1px] border-solid border-primary rounded-lg flex items-center justify-center">

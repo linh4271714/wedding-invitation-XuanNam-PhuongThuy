@@ -78,8 +78,7 @@ export default function BackgroundAudio({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const audioSrc = `${basePath}/audio/MaiMaiBenNhau.mp3`;
+  const audioSrc = `https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/audio/MaiMaiBenNhau.mp3`;
 
   return (
     <div className={className}>

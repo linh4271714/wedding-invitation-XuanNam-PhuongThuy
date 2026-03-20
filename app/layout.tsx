@@ -4,7 +4,6 @@ import "./globals.css";
 import { Providers } from "./providers";
 import BackgroundAudio from "@/components/atoms/BackgroundAudio";
 
-
 const greatVibes = Great_Vibes({
   weight: ["400"],
   variable: "--font-great-vibes",
@@ -26,6 +25,16 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: "Thiệp mời đám cưới của Nam và Thuỳ",
   description: "Đám cưới của Nam và Thuỳ",
+  openGraph: {
+    images: [
+      {
+        url: 'https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/thumbnail/bg1.png', // Must be a full, absolute URL
+        width: 1200,
+        height: 630,
+        alt: 'Ourm wedding',
+      },
+    ],
+  }
 };
 
 export default function RootLayout({

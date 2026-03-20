@@ -7,11 +7,11 @@ import album3 from "../../assets/images/album3.jpg";
 
 const Album = () => {
     return <>
-        <div className="flex gap-0 px-3">
+        <div className="flex gap-0 mt-10">
             <FloatToRight className="w-1/2"><Image src={album1} alt='' className="w-full h-auto" /></FloatToRight>
             <FloatToLeft className="w-1/2"><Image src={album2} alt='' className="w-full h-auto" /></FloatToLeft>
         </div>
-        <FloatToRight className="px-3">
+        <FloatToRight>
             <Image src={album3} alt='' />
         </FloatToRight>
     </>
