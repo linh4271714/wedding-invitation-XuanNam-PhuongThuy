@@ -60,19 +60,19 @@ export default function BackgroundAudio({
       void tryPlay();
       window.removeEventListener("pointerdown", startOnFirstGesture);
       window.removeEventListener("keydown", startOnFirstGesture);
-      window.removeEventListener("scroll", startOnFirstGesture);
+      window.removeEventListener("touchmove", startOnFirstGesture);
       window.removeEventListener("touchstart", startOnFirstGesture);
     };
 
     window.addEventListener("pointerdown", startOnFirstGesture, { once: true });
     window.addEventListener("keydown", startOnFirstGesture, { once: true });
-    window.addEventListener("scroll", startOnFirstGesture, { once: true });
+    window.addEventListener("touchmove", startOnFirstGesture, { once: true, passive: false });
     window.addEventListener("touchstart", startOnFirstGesture, { once: true });
 
     return () => {
       window.removeEventListener("pointerdown", startOnFirstGesture);
       window.removeEventListener("keydown", startOnFirstGesture);
-      window.removeEventListener("scroll", startOnFirstGesture);
+      window.removeEventListener("touchmove", startOnFirstGesture);
       window.removeEventListener("touchstart", startOnFirstGesture);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

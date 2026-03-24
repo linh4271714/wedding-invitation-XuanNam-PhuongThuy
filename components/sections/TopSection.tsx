@@ -1,5 +1,5 @@
 import Image from "next/image";
-import prewed1 from "../../assets/images/topImage.jpg";
+import image from "../../assets/images/top.jpg";
 import FadingAnimation from "../atoms/FadingAnimation";
 import FloatToTop from "../atoms/FloatToTop";
 import topDivider from "../../assets/svgs/VintageDecorativeDivider.svg"
@@ -21,7 +21,7 @@ const TopSection = () => {
         </div>
         <FloatToTop>
             <Image
-                src={prewed1}
+                src={image}
                 alt=""
                 aria-hidden="true"
                 priority
