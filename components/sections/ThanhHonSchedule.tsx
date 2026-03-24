@@ -1,5 +1,4 @@
 import FadingAnimation from "../atoms/FadingAnimation"
-import QRchure from "../../assets/images/QRchure.png";
 import GuiMungCuoiButton from "../atoms/GuiMungCuoiButton";
 
 const ThanhHonSchedule =()=>{
@@ -17,8 +16,12 @@ const ThanhHonSchedule =()=>{
             <p className="text-secondary italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Chủ nhật, ngày 18 tháng 02 năm Bính Ngọ</p>
         </FadingAnimation>
     </div>
-    <FadingAnimation>
-        <p className="px-10 italic text-md 2xl:text-lg mt-5 mb-5 text-center">Gia đình nhà trai xin kính mời tất cả khách mời dùng bữa tại tư gia sau khi đám cưới diễn ra.</p>
+    <FadingAnimation className="py-5 m-auto">
+        <div className="border-[1px] border-solid border-primary rounded-md py-2 px-4 flex flex-col items-center justify-center">
+            <p className="text-md 2xl:text-lg font-bold text-capitalize">Bữa cơm thân mật</p>
+            <p className="text-md 2xl:text-lg">17h | 04 - 04 - 2026</p>
+            <p className="italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Thứ 7, ngày 17 tháng 02 năm Bính Ngọ</p>
+        </div>
     </FadingAnimation>
     <FadingAnimation className="flex flex-col items-center justify-center w-full px-5">
         <p className="text-primary text-2xl text-center mb-3" style={{ fontFamily: "var(--font-great-vibes)" }}>{`Hân hạnh được đón tiếp tại nhà trai`}</p>
@@ -26,7 +29,7 @@ const ThanhHonSchedule =()=>{
         <p className="text-primary text-xl font-bold"><span style={{ fontFamily: "var(--font-great-vibes)", marginRight: '4px' }}>Bà</span>Trần Thị Thanh</p>
         <p className="text-primary text-lg mt-3 text-center">Thôn Thọ Lộc, xã Tống Sơn,<br /> tỉnh Thanh Hoá</p>
     </FadingAnimation>
-    <GuiMungCuoiButton QR={QRchure} />
+    <GuiMungCuoiButton />
     </>
 }
 

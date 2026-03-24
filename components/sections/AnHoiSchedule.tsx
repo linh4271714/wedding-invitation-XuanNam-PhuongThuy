@@ -1,6 +1,4 @@
 import FadingAnimation from "../atoms/FadingAnimation"
-import GuiMungCuoiButton from "../atoms/GuiMungCuoiButton"
-import QRcodau from "../../assets/images/QRcodau.png";
 
 const AnHoiSchedule =()=>{
     return <>
@@ -17,8 +15,12 @@ const AnHoiSchedule =()=>{
             <p className="text-secondary italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Thứ 6, ngày 16 tháng 02 năm Bính Ngọ</p>
         </FadingAnimation>
     </div>
-    <FadingAnimation>
-        <p className="px-10 italic text-md 2xl:text-lg mt-5 mb-5 text-center">Gia đình nhà gái xin kính mời tất cả khách mời dùng bữa tại tư gia vào lúc 9h đến 12h sáng vào thứ 7 ngày hôm sau.</p>
+    <FadingAnimation className="py-5 m-auto">
+        <div className="border-[1px] border-solid border-primary rounded-md py-2 px-4 flex flex-col items-center justify-center">
+            <p className="text-md 2xl:text-lg font-bold text-capitalize">Bữa cơm thân mật</p>
+            <p className="text-md 2xl:text-lg">9h | 04 - 04 - 2026</p>
+            <p className="italic text-sm 2xl:text-md text-center mt-3 whitespace-nowrap">Tức Thứ 7, ngày 17 tháng 02 năm Bính Ngọ</p>
+        </div>
     </FadingAnimation>
     <FadingAnimation className="flex flex-col items-center justify-center w-full px-5">
         <p className="text-primary text-2xl text-center" style={{ fontFamily: "var(--font-great-vibes)" }}>{`Hân hạnh được đón tiếp tại nhà gái`}</p>
@@ -26,7 +28,6 @@ const AnHoiSchedule =()=>{
         <p className="text-primary text-xl font-bold"><span style={{ fontFamily: "var(--font-great-vibes)", marginRight: '4px' }}>Bà</span>Nguyễn Thị Thơm</p>
         <p className="text-primary text-lg mt-3 text-center">Thôn Đại Thắng, xã Lĩnh Toại,<br /> tỉnh Thanh Hoá</p>
     </FadingAnimation>
-    <GuiMungCuoiButton QR={QRcodau} />
     </>
 }
 

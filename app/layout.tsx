@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/thumbnail/bg1.png', // Must be a full, absolute URL
+        url: 'https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/thumbnail/top.jpg', // Must be a full, absolute URL
         width: 1200,
         height: 630,
         alt: 'Ourm wedding',

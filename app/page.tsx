@@ -9,7 +9,7 @@ import ThanhHonSchedule from "@/components/sections/ThanhHonSchedule";
 import Album from "@/components/sections/Album";
 import FloatToLeft from "@/components/atoms/FloatToLeft";
 import FloatToRight from "@/components/atoms/FloatToRight";
-import divider from "../assets/svgs/ElegantFlourishExtrapolated.svg"
+import divider from "../assets/svgs/VintageDecorativeDivider.svg"
 import FloatToTop from "@/components/atoms/FloatToTop";
 import bride from "../assets/images/bride.jpg";
 import groom from "../assets/images/groom.jpg";
@@ -19,7 +19,7 @@ import hi9 from "../assets/images/hi9.jpg";
 
 export default function Home() {
   return (
-      <div className="relative bg-background min-h-screen w-screen flex flex-col lg:flex-row justify-center items-center lg:items-start gap-0 lg:gap-[100px] overflow-auto">
+      <div className="relative bg-background min-h-screen w-full flex flex-col lg:flex-row justify-center items-center lg:items-start gap-0 lg:gap-[100px] overflow-auto">
         <div className="w-screen max-w-[550px]">
           <TopSection />
 
@@ -51,7 +51,7 @@ export default function Home() {
 
           <AnHoiSchedule />
 
-          <FloatToTop>
+          <FloatToTop className="pt-10">
             <div className="flex gap-1 items-center justify-center w-full max-w-[550px]">
               <Image src={hi8} alt='' className="w-[30%]" />
               <Image src={hi5} alt='' className="w-[40%]" />
@@ -65,14 +65,14 @@ export default function Home() {
           
           <FadingAnimation className="w-full pt-10 px-3">
             <div className="bg-secondary flex flex-col items-center justify-center py-5">
-                <p className="text-white text-xl text-center whitespace-pre">{`Sự hiện diện của quý khách\n là niềm vinh hạnh của chúng tôi.`}</p>
+                <p className="text-white text-xl text-center whitespace-pre">{`Sự hiện diện của mọi người\n là niềm vinh hạnh của chúng tôi.`}</p>
             </div>
             <div className="bg-background border-solid border-[1px] border-secondary w-fit m-auto -mt-2 mb-10 px-4 py-1 text-xl 2xl:text-2xl" style={{ fontFamily: "var(--font-great-vibes)" }}>
                 <p>Rất hân hạnh được đón tiếp!</p>
             </div>
           </FadingAnimation>
 
-          <Image src={divider} alt='' className="w-full"/>
+          <Image src={divider} alt='' className="w-full" style={{transform: 'rotate(180deg)'}}/>
         </div>
       </div>
   );
