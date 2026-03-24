@@ -23,12 +23,12 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Thiệp mời đám cưới của Nam và Thuỳ",
-  description: "Đám cưới của Nam và Thuỳ",
+  title: "Xuân Nam & Phương Thuỳ",
+  description: "Thiệp mời đám cưới",
   openGraph: {
     images: [
       {
-        url: 'https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/thumbnail/top.jpg', // Must be a full, absolute URL
+        url: 'https://linh4271714.github.io/wedding-invitation-XuanNam-PhuongThuy/thumbnail/top.jpg',
         width: 1200,
         height: 630,
         alt: 'Ourm wedding',

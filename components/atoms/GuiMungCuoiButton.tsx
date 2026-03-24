@@ -1,13 +1,10 @@
 'use client';
 import { useState } from "react"
-import Image from "next/image";
-import FadingAnimation from "./FadingAnimation";
-import QRcodau from "../../assets/images/QRcodau.png";
-import QRchure from "../../assets/images/QRchure.png";
+import Image, { StaticImageData } from "next/image";
 import WeddingGiftEnvelope from "../../assets/svgs/WeddingGiftEnvelope.gif"
 import FloatToTop from "./FloatToTop";
 
-const GuiMungCuoiButton = () => {
+const GuiMungCuoiButton = ({QRCode}: { QRCode: StaticImageData }) => {
     const [isShowQR, setShowQR] = useState(false)
 
     return <>
@@ -16,7 +13,7 @@ const GuiMungCuoiButton = () => {
             <span className="-mt-8 text-sm text-secondary italic">Gửi quà mừng cưới</span>
         </FloatToTop>
         {isShowQR && 
-            <div className="fixed z-50 h-[80vh] top-[10vh] lg:w-[50vw] left-[15vw] lg:left-[25vw] p-5 pt-10 bg-background border-[1px] border-solid border-primary rounded-lg flex items-center justify-center">
+            <div className="fixed z-50 h-[80vh] top-[10vh] w-[80vw] lg:w-[50vw] left-[10vw] lg:left-[25vw] p-5 pt-10 bg-background border-[1px] border-solid border-primary rounded-lg flex items-center justify-center">
                 <button
                     onClick={() => setShowQR(false)}
                     className="absolute top-0 p-2 rounded-full hover:bg-gray-200 focus:outline-none"
@@ -29,8 +26,7 @@ const GuiMungCuoiButton = () => {
                     </svg>
                 </button>
                 <div className="flex flex-col gap-2 items-center justify-center h-full">
-                    <Image src={QRcodau} alt='' className="h-1/2 w-auto object-contain" />
-                    <Image src={QRchure} alt='' className="h-1/2 w-auto object-contain" />
+                    <Image src={QRCode} alt='' className="h-auto w-full object-contain" />
                 </div>
             </div>
         }

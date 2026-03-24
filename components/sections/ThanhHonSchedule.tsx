@@ -1,5 +1,6 @@
 import FadingAnimation from "../atoms/FadingAnimation"
 import GuiMungCuoiButton from "../atoms/GuiMungCuoiButton";
+import QRchure from "../../assets/images/QRchure.png";
 
 const ThanhHonSchedule =()=>{
     return <>
@@ -29,7 +30,7 @@ const ThanhHonSchedule =()=>{
         <p className="text-primary text-xl font-bold"><span style={{ fontFamily: "var(--font-great-vibes)", marginRight: '4px' }}>Bà</span>Trần Thị Thanh</p>
         <p className="text-primary text-lg mt-3 text-center">Thôn Thọ Lộc, xã Tống Sơn,<br /> tỉnh Thanh Hoá</p>
     </FadingAnimation>
-    <GuiMungCuoiButton />
+    <GuiMungCuoiButton QRCode={QRchure} />
     </>
 }
 

@@ -25,11 +25,14 @@ export default function BackgroundAudio({
 
     audioEl.volume = clampedVolume;
 
+    console.log("Trying to play background audio");
+
     try {
       await audioEl.play();
       setIsPlaying(true);
       setDidAutoplayFail(false);
-    } catch {
+    } catch(error) {
+      console.log("Failed to play background audio", error);
       setIsPlaying(false);
       setDidAutoplayFail(true);
     }
@@ -60,20 +63,26 @@ export default function BackgroundAudio({
       void tryPlay();
       window.removeEventListener("pointerdown", startOnFirstGesture);
       window.removeEventListener("keydown", startOnFirstGesture);
-      window.removeEventListener("touchmove", startOnFirstGesture);
+      window.removeEventListener("mousedown", startOnFirstGesture);
       window.removeEventListener("touchstart", startOnFirstGesture);
+      window.removeEventListener("scroll", startOnFirstGesture);
+      window.removeEventListener("visibilitychange", startOnFirstGesture);
     };
 
     window.addEventListener("pointerdown", startOnFirstGesture, { once: true });
     window.addEventListener("keydown", startOnFirstGesture, { once: true });
-    window.addEventListener("touchmove", startOnFirstGesture, { once: true, passive: false });
+    window.addEventListener("mousedown", startOnFirstGesture, { once: true });
     window.addEventListener("touchstart", startOnFirstGesture, { once: true });
+    window.addEventListener("scroll", startOnFirstGesture, { once: true });
+    window.addEventListener("visibilitychange", startOnFirstGesture, { once: true });
 
     return () => {
       window.removeEventListener("pointerdown", startOnFirstGesture);
       window.removeEventListener("keydown", startOnFirstGesture);
-      window.removeEventListener("touchmove", startOnFirstGesture);
+      window.removeEventListener("mousedown", startOnFirstGesture);
       window.removeEventListener("touchstart", startOnFirstGesture);
+      window.removeEventListener("scroll", startOnFirstGesture);
+      window.removeEventListener("visibilitychange", startOnFirstGesture);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
